@@ -1,0 +1,144 @@
+/* 178*275 */
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+}
+
+#container {
+    position: relative;
+    width: 1100px;
+    height: 730px;
+    margin: 50px auto;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+#title {
+    display: block;
+}
+
+h1 {
+    font-size:  40px;
+    font-weight: bolder;
+}
+
+h3 {
+    font-size: 20px;
+    
+}
+
+#mainGameScreen {
+    width: 800px;
+    margin: auto;
+    position: relative;
+    display: block;
+}
+
+#endGameScreen {
+    position: absolute;
+    width: 800px;
+    height: 590px;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 1;
+    display: none;
+}
+
+#endGameScreen div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+
+}
+
+#mainGameScreen::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#cardsList {
+    list-style-type: none;
+    position: relative;
+}
+
+#cardsList li {
+    width: 25%;
+    margin: 0;
+    display: block;
+    float: left;
+
+    
+}
+
+.back {
+    border: rgb(133, 37, 44) 2px solid;
+    cursor: pointer;
+    position: absolute;
+    margin: 10px;
+    height: 275px;
+    width: 178px;
+    background-image: url(img/cardback.png);
+    background-size: cover;
+    background-position: center; 
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    /* display: none; */
+}
+
+.front {
+    border: #333 2px solid;
+    margin: 10px;
+    height: 275px;
+    width: 178px;
+    border-radius: 10px;
+    transform: rotateY(90deg);
+    transition-duration: 0.2s;
+}
+
+.a {
+    background-image: url(img/a.png);
+}
+
+.q { 
+    background-image: url(img/q.png);
+}
+
+.k {
+    background-image: url(img/k.png);
+}
+
+.j {
+    background-image: url(img/j.png);
+}
+
+#btnNewGameHolder {
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+   
+}
+
+#btnNewGame {
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+    border: #333 2px solid;
+    background-color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
